@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "girlfriend",
+  "version": "${version}",
+  "name": "Girlfriend",
+  "description": "A mod ading a girlfriend to Minecraft.",
+  "authors": [
+    "vini2003"
+  ],
+  "contact": {
+    "email": "contact@vini2003.dev"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "dev.vini2003.girlfriend.GF"
+    ],
+    "client": [
+      "dev.vini2003.girlfriend.GFClient"
+    ]
+  },
+  "mixins": [
+    "girlfriend.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.6",
+    "fabric": ">=0.35.1+1.17",
+    "minecraft": "1.17"
+  }
+}

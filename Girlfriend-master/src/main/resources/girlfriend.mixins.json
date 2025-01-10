@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "dev.vini2003.girlfriend.mixin",
+  "compatibilityLevel": "JAVA_16",
+  "mixins": [
+    "common.ZombieEntityMixin"
+  ],
+  "client": [
+    "client.WitherSkullEntityRendererMixin",
+    "client.LivingEntityRendererMixin",
+    "client.PlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "sound.girlfriend.key_typed": {
+    "sounds": [
+      "girlfriend:key_typed"
+    ],
+    "subtitle": "subtitles.girlfriend.key_typed"
+  }
+}

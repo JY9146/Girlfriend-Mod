@@ -1,0 +1,13 @@
+{
+  "text.tntrain.spawn_wave": "Spawn wave",
+  "text.tntrain.tntrain": "TNT Rain",
+  "text.tntrain.sky.enabled": "Sky TNT rain is §aenabled§r.",
+  "text.tntrain.sky.disabled": "Sky TNT rain is §cdisabled§r.",
+  "text.tntrain.void.enabled": "Void TNT rain is §aenabled§r.",
+  "text.tntrain.void.disabled": "Void TNT rain is §cdisabled§r.",
+  "text.tntrain.increase_speed": "Increase speed",
+  "text.tntrain.decrease_speed": "Decrease speed",
+  "text.tntrain.toggle_display": "Toggle display",
+  "text.tntrain.void": "The Void trembles...",
+  "text.tntrain.information": "%s/s (%s, %s)"
+}

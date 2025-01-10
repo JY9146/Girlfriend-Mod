@@ -1,0 +1,87 @@
+plugins {
+    id "fabric-loom"
+    id "maven-publish"
+}
+
+sourceCompatibility = JavaVersion.VERSION_16
+targetCompatibility = JavaVersion.VERSION_16
+
+archivesBaseName = project.mod_name
+group = project.mod_group
+version = project.mod_version + "+" + project.minecraft_version
+
+repositories {
+    maven {
+        name = "CottonMC"
+        url = "https://server.bbkr.space/artifactory/libs-release"
+    }
+
+    maven {
+        name = "GitHub Packages for Blade"
+        url = "https://maven.pkg.github.com/vini2003/Blade"
+
+        credentials {
+            username = System.getenv("GPR_USERNAME")
+            password = System.getenv("GPR_TOKEN")
+        }
+    }
+}
+
+dependencies {
+    // Minecraft
+    minecraft "com.mojang:minecraft:${project.minecraft_version}"
+
+    // Yarn
+    mappings "net.fabricmc:yarn:${project.yarn_mappings}:v2"
+
+    // Fabric Loader
+    modImplementation "net.fabricmc:fabric-loader:${project.fabric_loader_version}"
+
+    // Fabric API
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+
+    // LibGui
+    modImplementation "io.github.cottonmc:LibGui:${project.libgui_version}"
+    include "io.github.cottonmc:LibGui:${project.libgui_version}"
+}
+
+processResources {
+    inputs.property "version", project.version
+
+    filesMatching("fabric.mod.json") {
+        expand "version": project.version
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+
+    it.options.release = 16
+}
+
+java {
+    withSourcesJar()
+}
+
+jar {
+    from("LICENSE") {
+        rename { "${it}_${project.archivesBaseName}"}
+    }
+}
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            artifact(remapJar) {
+                builtBy remapJar
+            }
+            artifact(sourcesJar) {
+                builtBy remapSourcesJar
+            }
+        }
+    }
+
+    repositories {
+        mavenLocal()
+    }
+}
