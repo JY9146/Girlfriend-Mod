@@ -1,4 +1,4 @@
-This is the girlfriend mod from Tommyinnit (https://www.youtube.com/watch?v=TRigGOh-_ys), made by Vini2003. I can't get it to work, there seems to be errors in gradle. I'm very new to Github and don't really know any Java or Gradle. So if you know what your doing you can make a fork of it working or make a pull request or something. If anyone has found any files in some of the deleted repositories please upload them here (I'm trying to compile them all): https://www.dropbox.com/request/N19bwKETJRDn0nVWx2BO
+This is the girlfriend mod from Tommyinnit (https://www.youtube.com/watch?v=TRigGOh-_ys), made by Vini2003. It doesn't seem to have much other then the overlay in the begining of the mod, as the rest seems to be practally a different mod entirely. So if you know what your doing you can make a fork of it working or make a pull request or something. If anyone has found any files in some of the deleted repositories please upload them here (I'm trying to compile them all): https://www.dropbox.com/request/N19bwKETJRDn0nVWx2BO
 
 # Commands
 * Press `f` to fire tnt
